@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #310E10;
+    padding: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 35px);
+    gap: 2px;
+    background-color: #310E10;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    background-color: #45462A;
+    border-radius: 4px;
+    transition: all 0.1s ease;
+}
+
+.snake {
+    background-color: #74070E;
+    border-radius: 4px;
+}
+
+.food {
+    background-color: #F4E3B2;
+    border-radius: 50%;
+}
+
+.controls {
+    margin-left: 30px;
+    background: #45462A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    min-width: 250px;
+}
+
+.score-board {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background: #310E10;
+    color: #F4E3B2;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #947268;
+}
+
+#score-value {
+    font-size: 32px;
+    color: #F4E3B2;
+    margin-left: 10px;
+}
+
+.joystick {
+    background: #310E10;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #947268;
+}
+
+.joystick-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #F4E3B2;
+    font-size: 18px;
+}
+
+.joystick-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Расположение кнопок как на клавиатуре */
+#btn-up {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#btn-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#btn-down {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#btn-right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.joystick-btn {
+    padding: 12px;
+    font-size: 24px;
+    background: #74070E;
+    color: #F4E3B2;
+    border: 1px solid #947268;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.joystick-btn:hover {
+    background: #947268;
+    transform: scale(1.02);
+}
+
+.joystick-btn:active {
+    transform: scale(0.98);
+    background: #310E10;
+}
+
+.speed-control {
+    background: #310E10;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #947268;
+}
+
+.speed-control label {
+    font-weight: bold;
+    color: #F4E3B2;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#speed-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #947268;
+    border-radius: 5px;
+    background: #45462A;
+    color: #F4E3B2;
+    font-weight: bold;
+}
+
+#speed-input:focus {
+    outline: none;
+    border-color: #F4E3B2;
+}
+
+.speed-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #947268;
+}
+
+.info {
+    font-size: 13px;
+    text-align: center;
+    padding: 12px;
+    background: #310E10;
+    border-radius: 8px;
+    color: #947268;
+    line-height: 1.5;
+    border: 1px solid #947268;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .controls {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    #game-board {
+        grid-template-columns: repeat(10, 30px);
+    }
+    
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .joystick-buttons {
+        max-width: 180px;
+    }
+    
+    .joystick-btn {
+        padding: 10px;
+        font-size: 20px;
+    }
+}

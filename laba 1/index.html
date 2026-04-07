@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Змейка</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="game-board"></div>
+    <div class="controls">
+        <div class="score-board">
+            Счет: <span id="score-value">1</span>
+        </div>
+        
+        <div class="joystick">
+            <div class="joystick-title">Управление</div>
+            <div class="joystick-buttons">
+                <button id="btn-up" class="joystick-btn">⬆️</button>
+                <button id="btn-left" class="joystick-btn">⬅️</button>
+                <button id="btn-right" class="joystick-btn">➡️</button>
+                <button id="btn-down" class="joystick-btn">⬇️</button>
+            </div>
+        </div>
+        
+        <div class="speed-control">
+            <label for="speed-input">Скорость (мс):</label>
+            <input type="number" id="speed-input" value="800" min="100" max="1000" step="50">
+            <div class="speed-info">Текущая скорость: 800 мс</div>
+        </div>
+        
+        <div class="info">
+            Управление: стрелки на клавиатуре или кнопки<br>
+            Нажмите R для сброса игры
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+</html>
