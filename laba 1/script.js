@@ -118,14 +118,14 @@ function startGameInterval() {
     gameInterval = setInterval(gameLoop, speed);
 }
 
-// ===== ЗАПУСК =====
+// ЗАПУСК 
 initializeGameBoard();
 generateFood();
 render();
 updateScoreDisplay();
 startGameInterval();
 
-// ===== ЗАДАНИЕ 1: Клавиши стрелок =====
+//  Клавиши стрелок 
 document.addEventListener('keydown', (event) => {
     const key = event.key;
     
@@ -153,7 +153,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// ===== ЗАДАНИЕ 2: Кнопки джойстика =====
+//  Кнопки джойстика 
 document.getElementById('btn-left').addEventListener('click', () => {
     if (direction !== 'right') direction = 'left';
 });
@@ -170,7 +170,7 @@ document.getElementById('btn-down').addEventListener('click', () => {
     if (direction !== 'up') direction = 'down';
 });
 
-// ===== ЗАДАНИЕ 5: Изменение скорости =====
+//  Изменение скорости 
 const speedInput = document.getElementById('speed-input');
 const speedInfo = document.querySelector('.speed-info');
 
