@@ -1,0 +1,56 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Факты о числах</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Факты о числах</h1>
+        <p class="subtitle">Введите любое число и узнайте интересный факт!</p>
+        
+        <div class="search-container">
+            <input 
+                type="number" 
+                id="numberInput" 
+                placeholder="Введите число..."
+                value="42"
+            >
+            
+            <select id="categorySelect">
+                <option value="trivia">🎲 Случайный факт (trivia)</option>
+                <option value="math">📐 Математический (math)</option>
+                <option value="year">📅 О годе (year)</option>
+            </select>
+            
+            <button id="searchBtn">🔍 Поиск</button>
+        </div>
+        
+        <div id="loadingIndicator" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Загрузка факта...</p>
+        </div>
+        
+        <div id="resultContainer" class="result-container">
+            <div class="fact-card">
+                <div class="fact-icon">💡</div>
+                <div id="factText" class="fact-text">
+                    Введите число и нажмите "Поиск"
+                </div>
+            </div>
+        </div>
+        
+        <div class="examples">
+            <h3>Примеры:</h3>
+            <button class="example-btn" data-num="42">42</button>
+            <button class="example-btn" data-num="7">7</button>
+            <button class="example-btn" data-num="2020">2020</button>
+            <button class="example-btn" data-num="365">365</button>
+            <button class="example-btn" data-num="100">100</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
